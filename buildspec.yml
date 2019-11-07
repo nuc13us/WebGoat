@@ -3,11 +3,13 @@ version: 0.1
 phases:
   build:
     commands:
+      - mvn -version
+      - mvn install
 #       - add-apt-repository ppa:openjdk-r/ppa
 #       - apt-get update -q
 #       - apt install -y openjdk-11-jdk
 #       - export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
-      - mvn -version
+      
 
 artifacts:
   files:
