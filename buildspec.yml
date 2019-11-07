@@ -7,7 +7,7 @@ phases:
       - apt-get update -q
       - apt install -y openjdk-11-jdk
       - java -version
-      - mvn install
+      - mvn -version
 
 artifacts:
   files:
