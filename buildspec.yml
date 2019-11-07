@@ -6,6 +6,7 @@ phases:
       - add-apt-repository ppa:openjdk-r/ppa
       - apt-get update -q
       - apt install -y openjdk-11-jdk
+      - java -version
       - mvn package
 
 artifacts:
