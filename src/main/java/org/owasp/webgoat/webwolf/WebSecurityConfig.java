@@ -19,6 +19,7 @@
  *
  * Source for this application is maintained at https://github.com/WebGoat/WebGoat, a repository for free software projects.
  */
+//trigger scan for this file
 package org.owasp.webgoat.webwolf;
 
 import lombok.AllArgsConstructor;
