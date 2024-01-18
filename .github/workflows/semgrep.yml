@@ -2,15 +2,10 @@
 name: Semgrep
 
 on:
-  #trigger workflow when any pull request is created
   pull_request:
-    types: [opened]
-  # Scan on-demand through GitHub Actions interface:
-  workflow_dispatch: {}
-  # Scan mainline branches and report all findings: 
-  push:
-    branches: ["master", "main"]
-
+    types:
+      - opened
+      
 jobs:
   semgrep:
     # User-definable name of this GitHub Actions job:
