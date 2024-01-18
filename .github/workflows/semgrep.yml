@@ -1,10 +1,10 @@
 # Name of this GitHub Actions workflow.
 name: Semgrep
 
-on:
-  pull_request:
-    types:
-      - opened
+on:  
+  # Scan on push mainline branches and report all findings: 
+  push:
+    branches: ["master", "main"]
       
 jobs:
   semgrep:
