@@ -1,0 +1,21 @@
+# Name of this GitHub Actions workflow.
+name: TruffleHog
+
+on:
+  # Scan mainline branches and report all findings: 
+  push:
+    branches: ["master", "main"]
+jobs:
+  
+  trufflehog:
+    # If you are self-hosting, change the following `runs-on` value: 
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Secret Scanning
+      uses: trufflesecurity/trufflehog@main
+      with:
+        extra_args: --only-verified
