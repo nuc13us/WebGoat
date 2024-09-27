@@ -53,7 +53,7 @@ public class InsecureDeserializationTask extends AssignmentEndpoint {
     int delay;
 
     b64token = token.replace('-', '+').replace('_', '/');
-
+//trigger this to scan this file 
     try (ObjectInputStream ois =
         new ObjectInputStream(new ByteArrayInputStream(Base64.getDecoder().decode(b64token)))) {
       before = System.currentTimeMillis();
